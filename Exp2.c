@@ -107,28 +107,28 @@ int main(){
     fclose(randnumfptr);
 
     //Quick sort
-    // randnumfptr = fopen(randNumders, "r");
-    // printf("\nReading random array");
-    // for(int i = 0; i < n; i++){
-    //     fscanf(randnumfptr, "%d" , &a[i]);
-    // }
-    // fclose(randnumfptr);
-    // printf("\nDone\n");
-    // rangeTill = 100;
+    randnumfptr = fopen(randNumders, "r");
+    printf("\nReading random array");
+    for(int i = 0; i < n; i++){
+        fscanf(randnumfptr, "%d" , &a[i]);
+    }
+    fclose(randnumfptr);
+    printf("\nDone\n");
+    rangeTill = 100;
 
-    // printf("QuickSort\n");
-    // sortednumfptr = fopen(quicksort, "w");
-    // printf("Sorted numbers stored in (%s)",quicksort);
+    printf("QuickSort\n");
+    sortednumfptr = fopen(quicksort, "w");
+    printf("Sorted numbers stored in (%s)",quicksort);
 
-    // while(rangeTill <= n){
-    //     startTime = clock();
-    //     quickSort(a, 0,rangeTill);
-    //     endTime = clock();
-    //     fprintf(sortednumfptr, "%d\n",endTime-startTime);
-    //     rangeTill += 100;
-    // }
-    // fclose(sortednumfptr);
-    // printf("\nQuick sort done");
+    while(rangeTill <= n){
+        startTime = clock();
+        quickSort(a, 0,rangeTill);
+        endTime = clock();
+        fprintf(sortednumfptr, "%d\n",endTime-startTime);
+        rangeTill += 100;
+    }
+    fclose(sortednumfptr);
+     printf("\nQuick sort done");
 
     
     //Merge Sort
